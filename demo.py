@@ -1,3 +1,9 @@
 from clv.logger import logging
+from clv.exception import clvException
+import sys
 
-logging.info("Welcome to our custom log")
+try:
+    a = 1 / "10"
+except Exception as e:
+    raise clvException(e, sys) from e
+
