@@ -1,10 +1,5 @@
-from clv.logger import logging
-from clv.exception import clvException
-import sys
+from clv.pipline.training_pipeline import TrainPipeline
 
-try:
-    a = 1 / "10"
-except Exception as e:
-    logging.info(e)
-    raise clvException(e, sys) from e
 
+pipline = TrainPipeline()
+pipline.run_pipeline()
