@@ -1,0 +1,42 @@
+columns:
+  - CustomerID: category
+  - Description: category
+  - Country: category
+  - frequency: int
+  - recency: int
+  - Time: float
+  - monetary_value: float
+  - CLV: float
+
+
+numerical_columns:
+  - frequency
+  - recency
+  - Time
+  - monetary_value
+
+categorical_columns:
+  - Description
+  - Country
+
+drop_columns:
+  - CustomerID
+
+
+# for data transformation
+num_features:
+  - frequency
+  - recency
+  - Time
+  - monetary_value
+
+oh_columns:
+  - Description
+  - Country
+  
+transform_columns:
+  - frequency
+  - recency
+  - Time
+  - monetary_value
+
